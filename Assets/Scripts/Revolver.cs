@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Revolver : Weapon
 {
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Projectile bulletPrefab;
 
     protected override void StartShooting(XRBaseInteractor interactor)
     {
@@ -22,6 +22,8 @@ public class Revolver : Weapon
     protected override void Shoot()
     {
         base.Shoot();
-        GameObject projectileInstance = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        Projectile projectileInstance = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        projectileInstance.Init(this);
+        projectileInstance.Launch();
     }
 }

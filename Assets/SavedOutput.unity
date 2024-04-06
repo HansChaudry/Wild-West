@@ -771,7 +771,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6430787020577975483, guid: 5327eedeed384dc41bd774d1ce506fb5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0935848
+      value: 1.074
       objectReference: {fileID: 0}
     - target: {fileID: 6430787020577975483, guid: 5327eedeed384dc41bd774d1ce506fb5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1049,9 +1049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingForce: 1
   bulletSpawn: {fileID: 159683158}
-  recoilForce: 2
+  recoilForce: 6
   damage: 20
-  bulletPrefab: {fileID: 1928378229811125186, guid: 781f27d3c66cf534dacb9e54de465fbb, type: 3}
+  bulletPrefab: {fileID: 5783991536108368960, guid: 781f27d3c66cf534dacb9e54de465fbb, type: 3}
 --- !u!1 &1213263675
 GameObject:
   m_ObjectHideFlags: 0
