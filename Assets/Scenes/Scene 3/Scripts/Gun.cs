@@ -9,12 +9,14 @@ public class NewBehaviourScript : MonoBehaviour
     [Space, SerializeField] private AudioSource audioSource;
 
     private float lastShot;
+    public Animator animator;
+
 
     public void Shoot()
     {
         if (lastShot > Time.time) return;
         lastShot = Time.time + shootDelay;
-
+        animator.SetTrigger("Recoil");
         GunShotAudio();
 
         var bulletPrefab = Instantiate(bullet, bulletPosition.position, bulletPosition.rotation);
