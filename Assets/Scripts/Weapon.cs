@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(XRGrabInteractable))]
+[RequireComponent(typeof(AudioSource))] // Add this line to require AudioSource component
 
 public class Weapon : MonoBehaviour
 {
@@ -18,11 +19,13 @@ public class Weapon : MonoBehaviour
 
     private Rigidbody rigidBody;
     private XRGrabInteractable interactableWeapon;
+    private AudioSource audioSource; // Reference to AudioSource component
 
     protected virtual void Awake()
     {
         interactableWeapon = GetComponent<XRGrabInteractable>();
         rigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>(); // Get reference to AudioSource component
         SetupInteractableWeaponEvents();
     }
 
@@ -46,7 +49,11 @@ public class Weapon : MonoBehaviour
 
     protected virtual void StartShooting(XRBaseInteractor interactor)
     {
-        // Nothing
+        // Play shooting sound
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
     }
 
     protected virtual void StopShooting(XRBaseInteractor interactor)

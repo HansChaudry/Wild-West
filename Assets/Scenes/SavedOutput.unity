@@ -1072,12 +1072,14 @@ Transform:
   m_GameObject: {fileID: 911083513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.1, z: 2.5}
+  m_LocalPosition: {x: -10, y: 0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1996393715}
   - {fileID: 766407763}
+  - {fileID: 992802172}
+  - {fileID: 1932179629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &911083515
@@ -1095,9 +1097,11 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1996393715}
   - {fileID: 766407763}
+  - {fileID: 992802172}
+  - {fileID: 1932179629}
   enemyPrefab: {fileID: 3315841114723156032, guid: 2e0bc92ea69e10349818295125fe2b09, type: 3}
-  spawnInterval: 2
-  maxEnemiesNumber: 2
+  spawnInterval: 5
+  maxEnemiesNumber: 5
   player: {fileID: 1701908161}
 --- !u!1001 &943278483
 PrefabInstance:
@@ -1164,6 +1168,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b92a9f46a2e7647b288d897422d962, type: 3}
+--- !u!1 &992802171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992802172}
+  m_Layer: 0
+  m_Name: Cover Pt 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &992802172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992802171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6, y: 0, z: -6.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 911083514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053904959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2858,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2993ecedb7bd245a6f060a7ba6d737, type: 3}
+--- !u!1 &1932179628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932179629}
+  m_Layer: 0
+  m_Name: Cover Pt 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932179629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932179628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.53, y: 0, z: -14.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 911083514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1996393714
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,12 +3538,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 639772613097207930, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    - target: {fileID: 639772613097207930, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
       propertyPath: recoilForce
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 639772613097207930, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
       propertyPath: shootingForce
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459703926888062562, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459703926888062562, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf72b2e7d9d94524082b7d251a259497, type: 3}
+    - target: {fileID: 1459703926888062562, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462342226536112393, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
       propertyPath: m_InteractionManager
@@ -3540,6 +3622,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1211822916523887757, guid: cfcb332d67619214087fa9778edd768a, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1211822916523887757, guid: cfcb332d67619214087fa9778edd768a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eaa9ac4285788b1439854876fc9a0f38, type: 3}
+    - target: {fileID: 1211822916523887757, guid: cfcb332d67619214087fa9778edd768a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4304235861598074438, guid: cfcb332d67619214087fa9778edd768a, type: 3}
       propertyPath: m_Name
       value: M40A3 Rifle_prefab
