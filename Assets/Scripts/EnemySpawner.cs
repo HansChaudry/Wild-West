@@ -13,17 +13,15 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private GameObject spawnFX; // Reference to the spawn effect GameObject
     [SerializeField] private AudioClip spawnAudioClip; // Audio clip to play on spawn
-    [SerializeField] private float initialSpawnDelay; // Time in seconds to wait before spawning the first enemy
 
     private List<EnemyAI> spawnedEnemies = new List<EnemyAI>();
     private float timeSinceLastSpawn;
-    private bool hasStartedSpawn;
+    public bool hasStartedSpawn;
 
     private void Start()
     {
         timeSinceLastSpawn = spawnInterval;
         hasStartedSpawn = false;
-        StartCoroutine(StartSpawnDelay());
     }
 
     private void Update()
@@ -40,12 +38,6 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
         }
-    }
-
-    private IEnumerator StartSpawnDelay()
-    {
-        yield return new WaitForSeconds(initialSpawnDelay);
-        hasStartedSpawn = true;
     }
 
     private void SpawnEnemy()

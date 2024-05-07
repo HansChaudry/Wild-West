@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6518752089981114533, guid: 192a79fde5afd7640b6884a45bdc28f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.464
+      value: 7.13
       objectReference: {fileID: 0}
     - target: {fileID: 6518752089981114533, guid: 192a79fde5afd7640b6884a45bdc28f3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -553,7 +553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: initialSpawnDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[1]
       value: 
       objectReference: {fileID: 243761335}
+    - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1824057446}
     - target: {fileID: 8551811825234226744, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: m_Name
       value: Enemy Position 1A
@@ -1655,7 +1659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: initialSpawnDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -3176,7 +3180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: initialSpawnDelay
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -3409,6 +3413,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc2993ecedb7bd245a6f060a7ba6d737, type: 3}
+--- !u!4 &1824057446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2417869863095477592, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
+  m_PrefabInstance: {fileID: 369456816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1907046162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3479,7 +3488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: initialSpawnDelay
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8425988173367181788, guid: 070425ff3804429438d204bda7f4e09a, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -4221,7 +4230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5046973318089296937, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.461
+      value: 7.183
       objectReference: {fileID: 0}
     - target: {fileID: 5046973318089296937, guid: 94271a47741719243a3e7fb49cbcb25f, type: 3}
       propertyPath: m_LocalRotation.w

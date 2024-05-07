@@ -8,12 +8,7 @@ public class PickUpActivateSpawner : MonoBehaviour
 
     private void Start()
     {
-        // Deactivate the spawner immediately
-        if (spawner != null)
-        {
-            spawner.gameObject.SetActive(false);
-            hasActivated = false;
-        }
+        // Nothing
     }
 
     private void OnEnable()
@@ -41,8 +36,7 @@ public class PickUpActivateSpawner : MonoBehaviour
         // Reactivate the spawner only if it hasn't been activated before
         if (!hasActivated && spawner != null)
         {
-            spawner.gameObject.SetActive(true);
-            hasActivated = true;
+            spawner.hasStartedSpawn = true; // Directly set hasStartedSpawn to true
         }
     }
 }
