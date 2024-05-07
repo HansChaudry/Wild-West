@@ -2837,7 +2837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  minTimeUnderCover: 1
+  minTimeUnderCover: 0
   maxTimeUnderCover: 1
   minShotsToTake: 10
   maxShotsToTake: 10
