@@ -10,6 +10,7 @@ TagManager:
   - Pointer
   - Bullet
   - EnemyBody
+  - ReloadPack
   layers:
   - Default
   - TransparentFX

@@ -11,12 +11,15 @@ public class NewBehaviourScript : MonoBehaviour
     public TMPro.TMP_Text magazineText;
     public GameObject bullet;
     public Transform bulletPosition;
-    public AudioSource audioSource;
+    public AudioSource fireSound;
+    public AudioSource emptyFireSound;
+    public AudioSource reloadSound;
     public Animator animator;
 
     private void Start()
     {
         magazineText.text = magazine.ToString();
+        magazineText.alignment = TMPro.TextAlignmentOptions.Center;
     }
 
     public void Shoot()
@@ -24,6 +27,10 @@ public class NewBehaviourScript : MonoBehaviour
         if (magazine > 0)
         {
             fireGun();
+        }else{
+            magazineText.text = "Reload";
+            magazineText.alignment = TMPro.TextAlignmentOptions.Left;
+            magazineText.color = Color.red;
         }
 
         //flash the reload text
@@ -32,8 +39,15 @@ public class NewBehaviourScript : MonoBehaviour
     private void GunShotAudio()
     {
         var random = Random.Range(0.8f, 1.2f);
-        audioSource.pitch = random;
-        audioSource.Play();
+        fireSound.pitch = random;
+        fireSound.Play();
+    }
+
+    private void emptyFireAudio()
+    {
+        var random = Random.Range(0.8f, 1.2f);
+        emptyFireSound.pitch = random;
+        emptyFireSound.Play();
     }
 
     private void fireGun()
@@ -55,7 +69,20 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void reload()
     {
+        reloadSound.Play();
         magazine = 6;
         magazineText.text = magazine.ToString();
+        magazineText.alignment = TMPro.TextAlignmentOptions.Center;
+        magazineText.color = Color.white;
     }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag("ReloadPack"))
+        {
+            reload();
+        }
+    }
+
+
 }

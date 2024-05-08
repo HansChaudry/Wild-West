@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
             Component enemyScript = collision.gameObject.GetComponent<Enemy>();
             if (enemyScript != null)
             {
-                collision.gameObject.GetComponent<Enemy>().reduceLife(20);
+                collision.gameObject.GetComponent<Enemy>().reduceLife(35);
             }
             print("collided with " + collision.gameObject.name);
             Destroy(gameObject);
