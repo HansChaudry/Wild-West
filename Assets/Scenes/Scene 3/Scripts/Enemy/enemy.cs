@@ -16,7 +16,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Global.Instance.gameStatus)
+        {
+            aim();
+        }
     }
     public void reduceLife(int damage)
     {
@@ -35,5 +38,10 @@ public class Enemy : MonoBehaviour
         {
             enemyGun.enabled = false;
         }
+    }
+
+    private void aim()
+    {
+        animator.SetTrigger("Aim");
     }
 }

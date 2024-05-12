@@ -31,7 +31,6 @@ public class Bullet : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Enemy>().reduceLife(35);
             }
-            print("collided with " + collision.gameObject.name);
             Destroy(gameObject);
         }
 
