@@ -6,9 +6,24 @@ using UnityEngine.SceneManagement;
 public class RestartButton : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
+    public Animator animator;
+    public GameObject global;
+
+    public void triggerAnimation()
+    {
+        animator.SetTrigger("Press");
+    }
     public void RestartGame()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        if (Global.Instance.gameStatus)
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            Global.Instance.startGame();
+        }
+        
     }
     public void ButtonAudio()
     {
