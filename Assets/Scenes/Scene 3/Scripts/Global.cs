@@ -6,7 +6,8 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     public static Global Instance { get; private set; }
-    public bool gameStatus { get; private set; }
+    public bool gameStatus;
+    public GameObject player; 
 
     private void Awake()
     {

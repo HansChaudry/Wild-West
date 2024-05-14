@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
         if (Global.Instance.gameStatus)
         {
             aim();
+            turnEnemy();
         }
     }
     public void reduceLife(int damage)
@@ -43,5 +44,18 @@ public class Enemy : MonoBehaviour
     private void aim()
     {
         animator.SetTrigger("Aim");
+    }
+
+    private void turnEnemy()
+    {
+
+        if (Global.Instance.player && isAlive)
+        {
+            var lookPosition = Global.Instance.player.transform.position - transform.position;
+            //stop rotation on the Y axis
+            lookPosition.y = 0;
+            var rotation = Quaternion.LookRotation(lookPosition);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 1.5f * Time.smoothDeltaTime);
+        }
     }
 }

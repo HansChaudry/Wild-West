@@ -1,12 +1,13 @@
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class NewBehaviourScript : MonoBehaviour
 { 
     private float shootDelay = 0.2f;
     private float bulletSpeed = 3000f;
     private int magazine = 6;
     private float lastShot;
+    public GameObject MuzzleEffect;
 
     public TMPro.TMP_Text magazineText;
     public GameObject bullet;
@@ -64,6 +65,7 @@ public class NewBehaviourScript : MonoBehaviour
         var direction = bulletPrefab.transform.TransformDirection(Vector3.forward);
 
         bulletRB.AddForce(direction * bulletSpeed);
+        MuzzleEffect.GetComponent<ParticleSystem>().Play(bulletRB);
         Destroy(bulletPrefab, 5f);
     }
 
