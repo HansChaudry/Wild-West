@@ -24,10 +24,13 @@ public class Enemy : MonoBehaviour
     }
     public void reduceLife(int damage)
     {
-        life -= damage;
-        if (life <= 0)
-        {
-            die();
+       if(isAlive)
+        { 
+            life -= damage;
+            if (life <= 0)
+            {
+                die();
+            }
         }
     }
     private void die()

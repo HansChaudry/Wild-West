@@ -7,7 +7,7 @@ public class Global : MonoBehaviour
 {
     public static Global Instance { get; private set; }
     public bool gameStatus;
-    public GameObject player; 
+    public GameObject player;
 
     private void Awake()
     {
@@ -23,7 +23,10 @@ public class Global : MonoBehaviour
         }
 
         gameStatus = false;
+
     }
+
+   
 
     public void startGame()
     {
