@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Vincent
-  productName: Wild-West-Level-1
+  companyName: Wild West
+  productName: Level 1
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,10 +140,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: 11400000, guid: 814b28511ef3e4d2a8f2fc7552ad2548, type: 2}
-  - {fileID: 11400000, guid: b06043b2278ee455ba0c6fe8371d0ad5, type: 2}
-  - {fileID: 1122543458732608555, guid: 712c85531551446f58ef1ac9c6327286, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -164,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Vincent.WildWestLevel1
+    Android: com.WildWest.Level1
     Standalone: com.DefaultCompany.Wild-West
   buildNumber:
     Standalone: 0
